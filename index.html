@@ -10,10 +10,9 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <div class="nav__logo">NEXUM</div>
+    <a href="#"><img src="NEXUM-LOGO.png" alt="NEXUM" class="nav__logo" /></a>
     <ul class="nav__links">
       <li><a href="#features">Features</a></li>
-      <li><a href="#about">About</a></li>
     </ul>
     <a href="#signin" class="btn btn--outline">Sign In</a>
   </nav>
@@ -21,75 +20,52 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero__content">
-      <h1 class="hero__title">Build the future,<br /><span>faster.</span></h1>
-      <p class="hero__sub">NEXUM gives your team the tools to ship, scale, and succeed — all in one place.</p>
+      <h1 class="hero__title">Every repair order. Every update.<br /><span>One place.</span></h1>
+      <p class="hero__sub">NEXUM gives your team a platform to access RFQs, quotes, and orders — all in one place.</p>
       <div class="hero__actions">
         <a href="#signin" class="btn btn--primary">Start for free</a>
         <a href="#features" class="btn btn--ghost">See how it works</a>
       </div>
     </div>
-    <div class="hero__graphic">
-      <div class="glow-circle"></div>
+    <div class="hero__image">
+      <img src="360_F_158561775_mjwuvKbL7z6PgiNBwc5t0V5F1V88sKFV.jpg" alt="Aircraft on approach at night" />
     </div>
   </section>
 
   <!-- FEATURES -->
   <section class="features" id="features">
     <h2 class="section-title">Why NEXUM?</h2>
-    <p class="section-sub">Everything you need, nothing you don't.</p>
+    <p class="section-sub">Purpose-built for MRO operations.</p>
     <div class="features__grid">
       <div class="card">
+        <div class="card__icon">🔧</div>
+        <h3>Repair Order Tracking</h3>
+        <p>Every RO in one place — from initial RFQ through quote, approval, and final delivery.</p>
+      </div>
+      <div class="card">
         <div class="card__icon">⚡</div>
-        <h3>Blazing Fast</h3>
-        <p>Optimized from the ground up so your team never waits on the tools.</p>
+        <h3>Live Updates</h3>
+        <p>Real-time sync via Firestore means your team always sees the latest status the moment it changes.</p>
       </div>
       <div class="card">
-        <div class="card__icon">🔒</div>
-        <h3>Secure by Default</h3>
-        <p>End-to-end encryption and role-based access built into every layer.</p>
+        <div class="card__icon">✉️</div>
+        <h3>Integrated Email</h3>
+        <p>Send customer updates directly from the portal — no switching between inboxes and spreadsheets.</p>
       </div>
       <div class="card">
-        <div class="card__icon">🔗</div>
-        <h3>Seamless Integration</h3>
-        <p>Connects with the tools you already use in minutes, not weeks.</p>
+        <div class="card__icon">📋</div>
+        <h3>Stage-Based Workflow</h3>
+        <p>RFQ → Shipped → Quote Issued → Approval → Complete. Every order moves through a clear, trackable pipeline.</p>
       </div>
       <div class="card">
-        <div class="card__icon">📊</div>
-        <h3>Real-time Analytics</h3>
-        <p>Live dashboards that give you the signal without the noise.</p>
+        <div class="card__icon">🤖</div>
+        <h3>AI Draft Assist</h3>
+        <p>Auto-generate stage-appropriate customer replies in one click, tailored to the repair order context.</p>
       </div>
       <div class="card">
-        <div class="card__icon">🌐</div>
-        <h3>Global Scale</h3>
-        <p>Distributed infrastructure that grows with you, anywhere in the world.</p>
-      </div>
-      <div class="card">
-        <div class="card__icon">🛠</div>
-        <h3>Developer First</h3>
-        <p>Powerful APIs and SDKs so your engineers can build without limits.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about__text">
-      <h2>We're building the next layer of the web.</h2>
-      <p>NEXUM started with a simple idea: the best tools should be available to everyone. Our team of engineers and designers is on a mission to remove friction and unlock potential at every scale.</p>
-      <a href="#signin" class="btn btn--primary">Join us</a>
-    </div>
-    <div class="about__visual">
-      <div class="stat-block">
-        <span class="stat-number">10k+</span>
-        <span class="stat-label">Teams using NEXUM</span>
-      </div>
-      <div class="stat-block">
-        <span class="stat-number">99.9%</span>
-        <span class="stat-label">Uptime SLA</span>
-      </div>
-      <div class="stat-block">
-        <span class="stat-number">150+</span>
-        <span class="stat-label">Countries</span>
+        <div class="card__icon">🏢</div>
+        <h3>Multi-Customer Management</h3>
+        <p>Organize all repair orders by customer with instant search, filtering, and at-a-glance stage counts.</p>
       </div>
     </div>
   </section>
@@ -119,11 +95,12 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer__logo">NEXUM</div>
+    <img src="NEXUM-LOGO.png" alt="NEXUM" class="footer__logo" />
     <p class="footer__copy">&copy; 2026 NEXUM. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
+
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
