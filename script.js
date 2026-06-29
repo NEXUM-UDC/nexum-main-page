@@ -14,12 +14,11 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(s => observer.observe(s));
 
-// Form submit feedback
-const form = document.querySelector('.contact__form');
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const btn = form.querySelector('button');
-  btn.textContent = 'Submitted!';
-  btn.disabled = true;
-  btn.style.opacity = '0.7';
-});
+// Auth tab switching
+function switchTab(tab, el) {
+  document.getElementById('signinForm').style.display = tab === 'signin' ? 'flex' : 'none';
+  document.getElementById('signupForm').style.display = tab === 'signup' ? 'flex' : 'none';
+  document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('auth-tab--active'));
+  el.classList.add('auth-tab--active');
+}
+

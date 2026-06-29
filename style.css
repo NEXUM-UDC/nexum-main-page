@@ -1,21 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0a0a0f;
-  --surface: #13131a;
-  --border: #1e1e2e;
-  --accent: #7c6dff;
-  --accent-glow: rgba(124, 109, 255, 0.25);
-  --text: #e8e8f0;
-  --muted: #6b6b80;
+  --bg: #0A0F1E;
+  --surface: #111827;
+  --surface2: #1A2236;
+  --border: #1E2D45;
+  --accent: #00D4FF;
+  --accent2: #0099BB;
+  --accent-glow: rgba(0, 212, 255, 0.25);
+  --text: #E8EDF5;
+  --muted: #6B7A99;
   --radius: 12px;
+  --sans: 'Inter', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: var(--sans);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -121,8 +127,8 @@ ul { list-style: none; }
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(124,109,255,0.35) 0%, transparent 70%);
-  border: 1px solid rgba(124,109,255,0.2);
+  background: radial-gradient(circle at center, rgba(0,212,255,0.35) 0%, transparent 70%);
+  border: 1px solid rgba(0,212,255,0.2);
   animation: pulse 4s ease-in-out infinite;
 }
 @keyframes pulse {
@@ -262,6 +268,43 @@ ul { list-style: none; }
 }
 .contact__form textarea { resize: vertical; }
 .contact__form .btn { width: 100%; justify-content: center; text-align: center; }
+
+/* ── Auth Error ── */
+.auth-error {
+  font-size: 0.85rem;
+  color: #FF4D6A;
+  min-height: 1.2em;
+  font-family: var(--mono);
+}
+
+/* ── Auth Tabs ── */
+.auth-tabs {
+  display: flex;
+  gap: 0;
+  max-width: 480px;
+  margin: 2rem auto 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 0.65rem;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.auth-tab--active {
+  background: var(--accent);
+  color: var(--bg);
+}
 
 /* ── Footer ── */
 .footer {
